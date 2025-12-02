@@ -72,10 +72,17 @@ file(GLOB appsrcs
     "ui/*.c"
     "ui/screens/*.c"
     "ui/images/*.c"
+    "ui/fonts/src/*.c"
+    "ui/fonts/src/emoji/*.c"
 )
 list(APPEND MAIN_SOURCES ${appsrcs})
 
-target_include_directories(lvgl PUBLIC "ui" "ui/screens" "ui/images")
+target_include_directories(lvgl PUBLIC
+    "ui"
+    "ui/screens"
+    "ui/images"
+    "ui/fonts/include"
+)
 
 
 # Create the main executable, depending on the FreeRTOS option

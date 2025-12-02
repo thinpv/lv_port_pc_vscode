@@ -34,6 +34,8 @@ LV_IMG_DECLARE(ui_img_rainy_png);    // assets/rainy.png
 LV_IMG_DECLARE(ui_img_light_png);    // assets/light.png
 LV_IMG_DECLARE(ui_img_lamp_png);    // assets/lamp.png
 
+LV_FONT_DECLARE(font_puhui_basic_20_4);
+
 // UI INIT
 void ui_init(void);
 void ui_destroy(void);

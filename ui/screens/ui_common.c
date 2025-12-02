@@ -4,6 +4,8 @@
 // Project name: hc01_v9.2
 
 #include "ui_common.h"
+// #include "font_awesome.h"
+#include "font_puhui.h"
 
 lv_obj_t *ui_devices_light(lv_obj_t *root, device_t *dev)
 {
@@ -41,7 +43,7 @@ lv_obj_t *ui_devices_light(lv_obj_t *root, device_t *dev)
         lv_obj_set_height(ui_devName, LV_SIZE_CONTENT); /// 1
         lv_obj_set_align(ui_devName, LV_ALIGN_BOTTOM_LEFT);
         lv_label_set_text(ui_devName, dev->name);
-        lv_obj_set_style_text_font(ui_devName, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+        lv_obj_set_style_text_font(ui_devName, &font_puhui_basic_20_4, LV_PART_MAIN | LV_STATE_DEFAULT);
 
         lv_obj_set_user_data(ui_onoffBt, dev);
         lv_obj_add_event_cb(ui_onoffBt, ui_event_onoffBt, LV_EVENT_ALL, NULL);

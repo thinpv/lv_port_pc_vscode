@@ -4,6 +4,7 @@
 // Project name: hc01_v9.2
 
 #include "ui.h"
+#include <stdio.h>
 
 typedef struct device
 {
