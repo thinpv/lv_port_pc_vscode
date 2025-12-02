@@ -64,15 +64,15 @@ void ui_event_onoffBt2(lv_event_t *e)
 // build funtions
 
 device_t devices[20] = {
-    {"Thiết bị 1", 1},
+    {"Thiết bị 1", 0},
     {"Thiết bị 2", 1},
     {"Thiết bị 3", 2},
-    {"Thiết bị 4", 2},
-    {"Thiết bị 5", 1},
+    {"Thiết bị 4", 3},
+    {"Thiết bị 5", 4},
     {"Thiết bị 6", 2},
     {"Thiết bị 7", 2},
     {"Thiết bị 8", 1},
-    {"Thiết bị 9", 1},
+    {"Thiết bị 9", 0},
     {"Thiết bị 10", 2},
     {"Thiết bị 11", 2},
     {"Thiết bị 12", 2},

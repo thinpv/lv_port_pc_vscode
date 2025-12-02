@@ -100,7 +100,6 @@ void ui_home_screen_init(void)
     lv_obj_set_width(ui_weatherIcon, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_weatherIcon, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_weatherIcon, LV_ALIGN_CENTER);
-    lv_obj_add_flag(ui_weatherIcon, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_remove_flag(ui_weatherIcon, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
     lv_image_set_scale(ui_weatherIcon, 20);
 
@@ -128,7 +127,6 @@ void ui_home_screen_init(void)
     lv_image_set_src(ui_devIcon3, &ui_img_light_png);
     lv_obj_set_width(ui_devIcon3, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devIcon3, LV_SIZE_CONTENT);    /// 1
-    lv_obj_add_flag(ui_devIcon3, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_remove_flag(ui_devIcon3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_onoffBt3 = lv_button_create(ui_dev3);
@@ -137,14 +135,15 @@ void ui_home_screen_init(void)
     lv_obj_set_align(ui_onoffBt3, LV_ALIGN_TOP_RIGHT);
     lv_obj_add_flag(ui_onoffBt3, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_remove_flag(ui_onoffBt3, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_onoffBt3, 70, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui_onoffBt3, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_devName3 = lv_label_create(ui_dev3);
     lv_obj_set_width(ui_devName3, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devName3, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_devName3, LV_ALIGN_BOTTOM_LEFT);
-    lv_label_set_text(ui_devName3, "Ten thiet bi");
-    lv_obj_set_style_text_font(ui_devName3, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(ui_devName3, "Tên thiết bị");
+    lv_obj_set_style_text_font(ui_devName3, &font_puhui_basic_20_4, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_dev5 = lv_button_create(ui_relayRow1);
     lv_obj_set_width(ui_dev5, 220);
@@ -159,7 +158,6 @@ void ui_home_screen_init(void)
     lv_image_set_src(ui_devIcon5, &ui_img_lamp_png);
     lv_obj_set_width(ui_devIcon5, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devIcon5, LV_SIZE_CONTENT);    /// 1
-    lv_obj_add_flag(ui_devIcon5, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_remove_flag(ui_devIcon5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_onoffBt5 = lv_button_create(ui_dev5);
@@ -168,14 +166,15 @@ void ui_home_screen_init(void)
     lv_obj_set_align(ui_onoffBt5, LV_ALIGN_TOP_RIGHT);
     lv_obj_add_flag(ui_onoffBt5, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_remove_flag(ui_onoffBt5, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_onoffBt5, 70, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui_onoffBt5, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_devName5 = lv_label_create(ui_dev5);
     lv_obj_set_width(ui_devName5, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devName5, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_devName5, LV_ALIGN_BOTTOM_LEFT);
-    lv_label_set_text(ui_devName5, "Ten thiet bi");
-    lv_obj_set_style_text_font(ui_devName5, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(ui_devName5, "Tên thiết bị");
+    lv_obj_set_style_text_font(ui_devName5, &font_puhui_basic_20_4, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_relayRow2 = lv_obj_create(ui_home);
     lv_obj_remove_style_all(ui_relayRow2);
@@ -201,7 +200,6 @@ void ui_home_screen_init(void)
     lv_image_set_src(ui_devIcon6, &ui_img_light_png);
     lv_obj_set_width(ui_devIcon6, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devIcon6, LV_SIZE_CONTENT);    /// 1
-    lv_obj_add_flag(ui_devIcon6, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_remove_flag(ui_devIcon6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_onoffBt6 = lv_button_create(ui_dev6);
@@ -210,14 +208,15 @@ void ui_home_screen_init(void)
     lv_obj_set_align(ui_onoffBt6, LV_ALIGN_TOP_RIGHT);
     lv_obj_add_flag(ui_onoffBt6, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_remove_flag(ui_onoffBt6, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_onoffBt6, 70, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui_onoffBt6, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_devName6 = lv_label_create(ui_dev6);
     lv_obj_set_width(ui_devName6, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devName6, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_devName6, LV_ALIGN_BOTTOM_LEFT);
-    lv_label_set_text(ui_devName6, "Ten thiet bi");
-    lv_obj_set_style_text_font(ui_devName6, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(ui_devName6, "Tên thiết bị");
+    lv_obj_set_style_text_font(ui_devName6, &font_puhui_basic_20_4, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_dev7 = lv_button_create(ui_relayRow2);
     lv_obj_set_width(ui_dev7, 220);
@@ -232,7 +231,6 @@ void ui_home_screen_init(void)
     lv_image_set_src(ui_devIcon7, &ui_img_lamp_png);
     lv_obj_set_width(ui_devIcon7, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devIcon7, LV_SIZE_CONTENT);    /// 1
-    lv_obj_add_flag(ui_devIcon7, LV_OBJ_FLAG_CLICKABLE);     /// Flags
     lv_obj_remove_flag(ui_devIcon7, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
 
     ui_onoffBt7 = lv_button_create(ui_dev7);
@@ -241,14 +239,15 @@ void ui_home_screen_init(void)
     lv_obj_set_align(ui_onoffBt7, LV_ALIGN_TOP_RIGHT);
     lv_obj_add_flag(ui_onoffBt7, LV_OBJ_FLAG_SCROLL_ON_FOCUS);     /// Flags
     lv_obj_remove_flag(ui_onoffBt7, LV_OBJ_FLAG_SCROLLABLE);      /// Flags
+    lv_obj_set_style_radius(ui_onoffBt7, 70, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui_onoffBt7, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_devName7 = lv_label_create(ui_dev7);
     lv_obj_set_width(ui_devName7, LV_SIZE_CONTENT);   /// 1
     lv_obj_set_height(ui_devName7, LV_SIZE_CONTENT);    /// 1
     lv_obj_set_align(ui_devName7, LV_ALIGN_BOTTOM_LEFT);
-    lv_label_set_text(ui_devName7, "Ten thiet bi");
-    lv_obj_set_style_text_font(ui_devName7, &lv_font_montserrat_20, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_label_set_text(ui_devName7, "Tên thiết bị");
+    lv_obj_set_style_text_font(ui_devName7, &font_puhui_basic_20_4, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_point = lv_obj_create(ui_home);
     lv_obj_remove_style_all(ui_point);

@@ -33,7 +33,7 @@ LV_IMG_DECLARE(ui_img_bg_png);    // assets/bg.png
 LV_IMG_DECLARE(ui_img_rainy_png);    // assets/rainy.png
 LV_IMG_DECLARE(ui_img_light_png);    // assets/light.png
 LV_IMG_DECLARE(ui_img_lamp_png);    // assets/lamp.png
-
+LV_IMG_DECLARE(ui_img_min_nimum_png);    // assets/min_nimum.png
 LV_FONT_DECLARE(font_puhui_basic_20_4);
 
 // UI INIT

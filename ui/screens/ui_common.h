@@ -22,6 +22,11 @@ extern "C"
     extern lv_obj_t *ui_devices_light(lv_obj_t *root, device_t *dev);
     extern lv_obj_t *ui_devices_row(lv_obj_t *root, device_t *dev1, device_t *dev2);
     extern lv_obj_t *ui_points(lv_obj_t *root, int num_point, int index);
+    extern lv_obj_t *ui_device_light(device_t *dev);
+    extern lv_obj_t *ui_device_switch_rgb_1(device_t *dev);
+    extern lv_obj_t *ui_device_switch_rgb_2(device_t *dev);
+    extern lv_obj_t *ui_device_switch_rgb_3(device_t *dev);
+    extern lv_obj_t *ui_device_switch_rgb_4(device_t *dev);
 
 #ifdef __cplusplus
 } /*extern "C"*/

@@ -6,19 +6,40 @@
 #include "ui.h"
 #include <stdio.h>
 
-typedef struct device
-{
-    char name[128]; // TB device description
-    uint32_t type;
-} device_t;
+#include "ui_common.h"
+
+lv_obj_t *ui_detail = NULL;
 
 void detail_dev(lv_event_t *e)
 {
     // Your code here
     lv_obj_t *btn = lv_event_get_target(e);
-    device_t *u = lv_obj_get_user_data(btn);
+    device_t *d = lv_obj_get_user_data(btn);
 
-    printf("detail_dev name = %s\n", u->name);
+    printf("detail_dev name = %s\n", d->name);
+
+    if (d->type == 0)
+    {
+        ui_detail = ui_device_light(d);
+    }
+    else if (d->type == 1)
+    {
+        ui_detail = ui_device_switch_rgb_1(d);
+    }
+    else if (d->type == 2)
+    {
+        ui_detail = ui_device_switch_rgb_2(d);
+    }
+    else if (d->type == 3)
+    {
+        ui_detail = ui_device_switch_rgb_3(d);
+    }
+    else if (d->type == 4)
+    {
+        ui_detail = ui_device_switch_rgb_4(d);
+    }
+    printf("init done detail_dev name = %s\n", d->name);
+    _ui_screen_change(&ui_detail, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, NULL);
 }
 
 void turn_on_dev(lv_event_t *e)
@@ -28,4 +49,66 @@ void turn_on_dev(lv_event_t *e)
     device_t *u = lv_obj_get_user_data(btn);
 
     printf("turn_on_dev name = %s\n", u->name);
+}
+
+void ui_event_back_from_detail_to_devices(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *current_ui = lv_event_get_target(e);
+
+    if (event_code == LV_EVENT_GESTURE && lv_indev_get_gesture_dir(lv_indev_active()) == LV_DIR_RIGHT)
+    {
+        lv_indev_wait_release(lv_indev_active());
+        if (current_ui)
+            lv_obj_del(current_ui);
+        lv_scr_load(ui_devices);
+    }
+}
+
+void ui_event_switchBt(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *btn = lv_event_get_target(e);
+    device_t *u = lv_obj_get_user_data(btn);
+
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        printf("button %s click\n", u->name);
+    }
+}
+
+void ui_event_switchBt2(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *btn = lv_event_get_target(e);
+    device_t *u = lv_obj_get_user_data(btn);
+
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        printf("button 2 %s click\n", u->name);
+    }
+}
+
+void ui_event_switchBt3(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *btn = lv_event_get_target(e);
+    device_t *u = lv_obj_get_user_data(btn);
+
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        printf("button 3 %s click\n", u->name);
+    }
+}
+
+void ui_event_switchBt4(lv_event_t *e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t *btn = lv_event_get_target(e);
+    device_t *u = lv_obj_get_user_data(btn);
+
+    if (event_code == LV_EVENT_CLICKED)
+    {
+        printf("button 4 %s click\n", u->name);
+    }
 }

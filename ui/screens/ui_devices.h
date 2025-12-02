@@ -16,31 +16,11 @@ extern void ui_devices_screen_destroy(void);
 extern void ui_event_devices(lv_event_t * e);
 extern lv_obj_t * ui_devices;
 extern lv_obj_t * ui_devList;
-extern lv_obj_t * ui_devRow;
+
 extern void ui_event_dev(lv_event_t * e);
-extern lv_obj_t * ui_dev;
-extern lv_obj_t * ui_devIcon;
 extern void ui_event_onoffBt(lv_event_t * e);
-extern lv_obj_t * ui_onoffBt;
-extern lv_obj_t * ui_devName;
-extern lv_obj_t * ui_dev1;
-extern lv_obj_t * ui_devIcon1;
-extern lv_obj_t * ui_onoffBt1;
-extern lv_obj_t * ui_devName1;
-extern lv_obj_t * ui_devRow1;
 extern void ui_event_dev2(lv_event_t * e);
-extern lv_obj_t * ui_dev2;
-extern lv_obj_t * ui_devIcon2;
 extern void ui_event_onoffBt2(lv_event_t * e);
-extern lv_obj_t * ui_onoffBt2;
-extern lv_obj_t * ui_devName2;
-extern lv_obj_t * ui_dev4;
-extern lv_obj_t * ui_devIcon4;
-extern lv_obj_t * ui_onoffBt4;
-extern lv_obj_t * ui_devName4;
-extern lv_obj_t * ui_point6;
-extern lv_obj_t * ui_point3;
-extern lv_obj_t * ui_point4;
 // CUSTOM VARIABLES
 
 #ifdef __cplusplus
@@ -48,4 +28,3 @@ extern lv_obj_t * ui_point4;
 #endif
 
 #endif
-
